@@ -1,5 +1,5 @@
-const color = require('lib/color').default;
-const logger = require('lib/logger').default;
+const color = require('./lib/color').default;
+const logger = require('./lib/logger').default;
 
 module.exports = {
   color,
