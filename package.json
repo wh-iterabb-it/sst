@@ -1,0 +1,25 @@
+{
+  "name": "server-side-tools",
+  "version": "0.0.1",
+  "description": "a set of common tools for node, which are pretty trivial to bring into a new repo.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BeauBouchard/server-side-tools.git"
+  },
+  "author": "Beau Bouchard",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BeauBouchard/server-side-tools/issues"
+  },
+  "homepage": "https://github.com/BeauBouchard/server-side-tools#readme",
+  "dependencies": {
+    "winston": "3.1.0"
+  }
+}
