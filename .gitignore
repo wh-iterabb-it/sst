@@ -3,3 +3,7 @@ node_modules
 
 # NPM Logs
 npm-debug.log
+
+# Code Coverage Exports
+coverage.lcov
+coverage
