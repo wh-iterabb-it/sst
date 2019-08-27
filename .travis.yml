@@ -1,16 +1,12 @@
 language: node_js
 
 node_js:
-  - "10.14.2"
+  - "10.15.2"
 
 sudo: required
-
-env:
-  global:
-    - APP_NAME=server-side-tools
 
 install:
   - npm i
 
 script:
-  - npm run cover
+  - npm run test
