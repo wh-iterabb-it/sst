@@ -4,7 +4,7 @@ const sinonChai = require('sinon-chai');
 
 const {
   kelvinToFahrenheit, kelvinToCelsius, fahrenheitToCelsius, celsiusToFahrenheit
-} = require('../../../lib/utils/convert');
+} = require('../../../').convert;
 
 chai.should();
 
@@ -64,7 +64,7 @@ describe('Convert Utility Tests', () => {
       } catch (error) {}
     });
   });
-  
+
   describe('fahrenheitToCelsius method', () => {
     it('should return freezing(0°C) for freezing(32°F) ', () => {
       try {

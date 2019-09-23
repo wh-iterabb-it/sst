@@ -3,8 +3,8 @@ const sinon = require('sinon');
 const sinonChai = require('sinon-chai');
 
 const {
-  detectURL, detectHostName, detectRootDomain
-} = require('../../../lib/utils/detect');
+  detectURL, detectHostName, detectRootDomain, isBoolean, isFinite, isInteger, isNull, isString, toNumber
+} = require('../../../').detect;
 
 chai.should();
 
@@ -92,4 +92,157 @@ describe('Detect Utility Tests', () => {
       expect(resp).to.equal(expected);
     });
   });
+
+  describe('isBoolean method', () => {
+    it('should return false when passed a string', () => {
+      const testData = 'true'; // a string that says "true"
+      const expected = false; // not a boolean
+      const resp = isBoolean(testData);
+      expect(resp).to.equal(expected);
+    });
+
+    it('should return false when passed an int', () => {
+      const testData = 0; // a string that says 0
+      const expected = false; // not a boolean
+      const resp = isBoolean(testData);
+      expect(resp).to.equal(expected);
+    });
+
+    it('should return true when passed a boolean', () => {
+      const testData = false; // a false boolean
+      const expected = true; // a boolean
+      const resp = isBoolean(testData);
+      expect(resp).to.equal(expected);
+    });
+  });
+
+  describe('isFinite method', () => {
+    it('should return false when passed a string', () => {
+      const testData = 'true';
+      const expected = false;
+      const resp = isFinite(testData);
+      expect(resp).to.equal(expected);
+    });
+
+    it('should return true when passed an int that is negative', () => {
+      const testData = -1.4501;
+      const expected = false;
+      const resp = isFinite(testData);
+      expect(resp).to.equal(expected);
+    });
+
+    it('should return false when passed a boolean', () => {
+      const testData = false;
+      const expected = false;
+      const resp = isFinite(testData);
+      expect(resp).to.equal(expected);
+    });
+
+    it('should return false when passed a boolean', () => {
+      const testData = 1337;
+      const expected = true;
+      const resp = isFinite(testData);
+      expect(resp).to.equal(expected);
+    });
+  });
+
+  describe('isInteger method', () => {
+    it('should return false when passed a string', () => {
+      const testData = 'true';
+      const expected = false;
+      const resp = isInteger(testData);
+      expect(resp).to.equal(expected);
+    });
+
+    it('should return true when passed an int', () => {
+      const testData = 1;
+      const expected = true;
+      const resp = isInteger(testData);
+      expect(resp).to.equal(expected);
+    });
+
+    it('should return false when passed a boolean', () => {
+      const testData = false;
+      const expected = false;
+      const resp = isInteger(testData);
+      expect(resp).to.equal(expected);
+    });
+  });
+
+  describe('isNull method', () => {
+    it('should return false when passed a string', () => {
+      const testData = 'true';
+      const expected = false;
+      const resp = isNull(testData);
+      expect(resp).to.equal(expected);
+    });
+
+    it('should return false when passed an int', () => {
+      const testData = 1;
+      const expected = false;
+      const resp = isNull(testData);
+      expect(resp).to.equal(expected);
+    });
+
+    it('should return false when passed a boolean', () => {
+      const testData = true;
+      const expected = false;
+      const resp = isNull(testData);
+      expect(resp).to.equal(expected);
+    });
+
+    it('should return true when passed a null', () => {
+      const testData = null;
+      const expected = true;
+      const resp = isNull(testData);
+      expect(resp).to.equal(expected);
+    });
+  });
+
+  describe('isString method', () => {
+    it('should return true when passed a string', () => {
+      const testData = 'true';
+      const expected = true;
+      const resp = isString(testData);
+      expect(resp).to.equal(expected);
+    });
+
+    it('should return false when passed an int', () => {
+      const testData = 1;
+      const expected = false;
+      const resp = isString(testData);
+      expect(resp).to.equal(expected);
+    });
+
+    it('should return false when passed a boolean', () => {
+      const testData = true;
+      const expected = false;
+      const resp = isString(testData);
+      expect(resp).to.equal(expected);
+    });
+
+    it('should return false when passed a null', () => {
+      const testData = null;
+      const expected = false;
+      const resp = isString(testData);
+      expect(resp).to.equal(expected);
+    });
+  });
+
+
+    describe('toNumber method', () => {
+      it('should return 123 when passed a string', () => {
+        const testData = '123';
+        const expected = 123;
+        const resp = toNumber(testData);
+        expect(resp).to.equal(expected);
+      });
+
+      it('should return 0 when passed a null', () => {
+        const testData = null;
+        const expected = 0;
+        const resp = toNumber(testData);
+        expect(resp).to.equal(expected);
+      });
+    });
 });

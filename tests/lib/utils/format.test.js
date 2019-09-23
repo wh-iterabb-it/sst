@@ -4,7 +4,7 @@ const sinonChai = require('sinon-chai');
 
 const {
   toHHMMSS, toDDHHMMSS, formatMoney, formatPast,
-} = require('../../../lib/utils/format');
+} = require('../../../').format;
 
 chai.should();
 

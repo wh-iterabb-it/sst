@@ -2,7 +2,7 @@ const chai = require('chai');
 const sinon = require('sinon');
 const sinonChai = require('sinon-chai');
 
-const sanitize = require('../../../lib/utils/sanitize');
+const sanitize = require('../../../').sanitize;
 
 chai.should();
 
