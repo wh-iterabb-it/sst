@@ -3,7 +3,7 @@ const sinon = require('sinon');
 const sinonChai = require('sinon-chai');
 
 const {
-  detectURL, detectHostName, detectRootDomain, isBoolean, isFinite, isInteger, isNull, isString, toNumber
+  detectURL, detectHostName, detectRootDomain, isBoolean, isFinite, isInteger, isNull, isString, isURL
 } = require('../../../').detect;
 
 chai.should();
@@ -26,6 +26,24 @@ describe('Detect Utility Tests', () => {
       try {
         const testURL = 'tacobell';
         const result = detectURL(testURL);
+        expect(result).to.equal(false);
+      } catch (error) {}
+    });
+  });
+
+  describe('isURL method', () => {
+    it('should return true when detecting a real url', () => {
+      try {
+        const testURL = 'http://www.google.com';
+        const result = isURL(testURL);
+        expect(result).to.equal(true);
+      } catch (error) {}
+    });
+
+    it('should return false when detecting an invalid url', () => {
+      try {
+        const testURL = 'tacobell';
+        const result = isURL(testURL);
         expect(result).to.equal(false);
       } catch (error) {}
     });
@@ -228,21 +246,4 @@ describe('Detect Utility Tests', () => {
       expect(resp).to.equal(expected);
     });
   });
-
-
-    describe('toNumber method', () => {
-      it('should return 123 when passed a string', () => {
-        const testData = '123';
-        const expected = 123;
-        const resp = toNumber(testData);
-        expect(resp).to.equal(expected);
-      });
-
-      it('should return 0 when passed a null', () => {
-        const testData = null;
-        const expected = 0;
-        const resp = toNumber(testData);
-        expect(resp).to.equal(expected);
-      });
-    });
 });
