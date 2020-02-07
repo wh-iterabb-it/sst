@@ -14,15 +14,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BeauBouchard/server-side-tools.git"
+    "url": "git+https://github.com/wh-iterabb-it/sst.git"
   },
   "author": "Beau Bouchard",
   "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/BeauBouchard/server-side-tools/issues"
+    "url": "https://github.com/wh-iterabb-it/sst/issues"
   },
-  "homepage": "https://github.com/BeauBouchard/server-side-tools#readme",
+  "homepage": "https://github.com/wh-iterabb-it/sst/#readme",
   "dependencies": {
     "winston": "3.2.1"
   },
