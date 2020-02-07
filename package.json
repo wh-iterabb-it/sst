@@ -1,5 +1,5 @@
 {
-  "name": "server-side-tools",
+  "name": "sst",
   "version": "0.0.1",
   "description": "a set of common tools for node, which are pretty trivial to bring into a new repo.",
   "main": "index.js",
@@ -17,6 +17,7 @@
     "url": "git+https://github.com/BeauBouchard/server-side-tools.git"
   },
   "author": "Beau Bouchard",
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/BeauBouchard/server-side-tools/issues"
