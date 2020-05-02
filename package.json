@@ -35,9 +35,9 @@
     "eslint-plugin-jsx-a11y": "6.2.3",
     "eslint-plugin-react": "7.19.0",
     "eslint-plugin-react-hooks": "2.5.1",
-    "mocha": "7.1.1",
+    "mocha": "7.1.2",
     "nyc": "15.0.1",
-    "sinon": "9.0.1",
+    "sinon": "9.0.2",
     "sinon-chai": "3.5.0"
   }
 }
