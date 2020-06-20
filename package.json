@@ -1,6 +1,6 @@
 {
   "name": "sst",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "a set of common tools for node, which are pretty trivial to bring into a new repo.",
   "main": "index.js",
   "directories": {
