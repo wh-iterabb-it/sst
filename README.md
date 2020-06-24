@@ -4,7 +4,6 @@ a set of common tools for node, which are pretty trivial to bring into a new rep
 
 ---
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/wh-iterabb-it/server-side-tools.svg)](https://greenkeeper.io/)
 [![Travis Badge](https://travis-ci.org/wh-iterabb-it/server-side-tools.svg?branch=master)](https://travis-ci.org/wh-iterabb-it/server-side-tools)
 [![Dependency Status](https://img.shields.io/david/wh-iterabb-it/server-side-tools.svg?style=flat)](https://david-dm.org/wh-iterabb-it/server-side-tools#info=Dependencies)
 [![devDependency Status](https://img.shields.io/david/dev/wh-iterabb-it/server-side-tools.svg?style=flat)](https://david-dm.org/BeauBouchard/server-side-tools#info=devDependencies)
@@ -14,9 +13,15 @@ a set of common tools for node, which are pretty trivial to bring into a new rep
 ## Installation
 
 You can install this in any node or javascript project.
+Install from the command line:
 ```bash
-npm install --save https://github.com/wh-iterabb-it/server-side-tools
+$ npm install @wh-iterabb-it/sst@0.0.1
 ```
+Install via package.json:
+```bash
+"@wh-iterabb-it/sst": "0.0.1"
+```
+
 
 ## Features
 
