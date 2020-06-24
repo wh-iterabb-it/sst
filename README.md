@@ -12,7 +12,20 @@ a set of common tools for node, which are pretty trivial to bring into a new rep
 
 ## Installation
 
-You can install this in any node or javascript project.
+### Authenticating to GitHub Packages
+You need an access tokeninstall packages in GitHub Packages. You can use a personal access token to authenticate with your username directly to GitHub Packages or the GitHub API. You must use a personal access token with the appropriate scopes to install packages in GitHub Packages. 
+
+For more information, see ["About GitHub Packages."](https://help.github.com/en/packages/using-github-packages-with-your-projects-ecosystem/configuring-npm-for-use-with-github-packages)
+
+You can authenticate to GitHub Packages with npm by either editing your per-user ~/.npmrc file to include your personal access token or by logging in to npm on the command line using your username and personal access token.
+
+To authenticate by adding your personal access token to your ~/.npmrc file, edit the ~/.npmrc file for your project to include the following line, replacing TOKEN with your personal access token. Create a new ~/.npmrc file if one doesn't exist.
+
+```json
+//npm.pkg.github.com/:_authToken=TOKEN
+```
+
+Then you can install this in any node or javascript project.
 Install from the command line:
 ```bash
 $ npm install @wh-iterabb-it/sst@0.0.1
