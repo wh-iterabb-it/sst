@@ -37,7 +37,7 @@
     "eslint-plugin-react-hooks": "4.0.8",
     "mocha": "8.1.1",
     "nyc": "15.1.0",
-    "sinon": "9.0.2",
+    "sinon": "9.1.0",
     "sinon-chai": "3.5.0"
   }
 }
