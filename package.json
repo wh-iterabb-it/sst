@@ -1,6 +1,6 @@
 {
   "name": "sst",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "a set of common tools for node, which are pretty trivial to bring into a new repo.",
   "main": "index.js",
   "directories": {
@@ -17,7 +17,9 @@
     "url": "git+https://github.com/wh-iterabb-it/sst.git"
   },
   "author": "Beau Bouchard",
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/wh-iterabb-it/sst/issues"
