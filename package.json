@@ -26,19 +26,19 @@
   },
   "homepage": "https://github.com/wh-iterabb-it/sst/#readme",
   "dependencies": {
-    "winston": "3.3.3"
+    "winston": "3.7.2"
   },
   "devDependencies": {
-    "chai": "4.2.0",
+    "chai": "4.3.6",
     "codecov": "3.8.3",
     "eslint": "8.15.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-import": "2.26.0",
     "eslint-plugin-prettier": "4.0.0",
     "mocha": "10.0.0",
+    "nyc": "15.1.0",
     "prettier": "2.6.2",
     "sinon": "9.2.4",
-    "sinon-chai": "3.6.0",
-    "nyc": "15.1.0"
+    "sinon-chai": "3.6.0"
   }
 }
