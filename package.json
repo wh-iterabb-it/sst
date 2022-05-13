@@ -8,7 +8,7 @@
   },
   "scripts": {
     "cover": "nyc npm test && nyc report --reporter=text-lcov > coverage.lcov && ./node_modules/.bin/codecov",
-    "test": "node_modules/.bin/mocha test/. --recursive",
+    "test": "node_modules/.bin/mocha tests/. --recursive",
     "test:lint": "eslint .",
     "test:lint:fix": "eslint . --fix --ignore-pattern polyfills"
   },
