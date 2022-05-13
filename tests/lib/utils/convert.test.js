@@ -1,10 +1,14 @@
-const chai = require('chai');
-const sinon = require('sinon');
-const sinonChai = require('sinon-chai');
+const chai = require("chai");
+const sinon = require("sinon");
+const sinonChai = require("sinon-chai");
 
 const {
-  kelvinToFahrenheit, kelvinToCelsius, fahrenheitToCelsius, celsiusToFahrenheit, toNumber
-} = require('../../../').convert;
+  kelvinToFahrenheit,
+  kelvinToCelsius,
+  fahrenheitToCelsius,
+  celsiusToFahrenheit,
+  toNumber,
+} = require("../../../").convert;
 
 chai.should();
 
@@ -13,21 +17,21 @@ chai.use(sinonChai);
 const { expect } = chai;
 
 const freezingKelvin = 273.15;
-const boilingKelvin =  373.15;
+const boilingKelvin = 373.15;
 const freezingFahrenheit = 32;
 const boilingFahrenheit = 212;
 const freezingCelsius = 0;
 const boilingCelsius = 100;
 
-describe('Convert Utility Tests', () => {
-  describe('kelvinToFahrenheit method', () => {
-    it('should return freezing(32°F) for freezing(273.15°K) ', () => {
+describe("Convert Utility Tests", () => {
+  describe("kelvinToFahrenheit method", () => {
+    it("should return freezing(32°F) for freezing(273.15°K) ", () => {
       try {
         const result = kelvinToFahrenheit(freezingKelvin);
         expect(result).to.equal(freezingFahrenheit);
       } catch (error) {}
     });
-    it('should return boiling(212°F) for boiling(373.15°K)', () => {
+    it("should return boiling(212°F) for boiling(373.15°K)", () => {
       try {
         const result = kelvinToFahrenheit(boilingKelvin);
         expect(result).to.equal(boilingFahrenheit);
@@ -35,14 +39,14 @@ describe('Convert Utility Tests', () => {
     });
   });
 
-  describe('celsiusToFahrenheit method', () => {
-    it('should return freezing(32°F) for freezing(0°C) ', () => {
+  describe("celsiusToFahrenheit method", () => {
+    it("should return freezing(32°F) for freezing(0°C) ", () => {
       try {
         const result = celsiusToFahrenheit(freezingCelsius);
         expect(result).to.equal(freezingFahrenheit);
       } catch (error) {}
     });
-    it('should return boiling(212°F) for boiling(100°C)', () => {
+    it("should return boiling(212°F) for boiling(100°C)", () => {
       try {
         const result = celsiusToFahrenheit(boilingCelsius);
         expect(result).to.equal(boilingFahrenheit);
@@ -50,14 +54,14 @@ describe('Convert Utility Tests', () => {
     });
   });
 
-  describe('kelvinToCelsius method', () => {
-    it('should return freezing(0°C) for freezing(273.15°K) ', () => {
+  describe("kelvinToCelsius method", () => {
+    it("should return freezing(0°C) for freezing(273.15°K) ", () => {
       try {
         const result = kelvinToCelsius(freezingKelvin);
         expect(result).to.equal(freezingCelsius);
       } catch (error) {}
     });
-    it('should return boiling(100°C) for boiling(373.15°K)', () => {
+    it("should return boiling(100°C) for boiling(373.15°K)", () => {
       try {
         const result = kelvinToCelsius(boilingKelvin);
         expect(result).to.equal(boilingCelsius);
@@ -65,14 +69,14 @@ describe('Convert Utility Tests', () => {
     });
   });
 
-  describe('fahrenheitToCelsius method', () => {
-    it('should return freezing(0°C) for freezing(32°F) ', () => {
+  describe("fahrenheitToCelsius method", () => {
+    it("should return freezing(0°C) for freezing(32°F) ", () => {
       try {
         const result = fahrenheitToCelsius(freezingFahrenheit);
         expect(result).to.equal(freezingCelsius);
       } catch (error) {}
     });
-    it('should return boiling(100°C) for boiling(212°F)', () => {
+    it("should return boiling(100°C) for boiling(212°F)", () => {
       try {
         const result = fahrenheitToCelsius(boilingFahrenheit);
         expect(result).to.equal(boilingCelsius);
@@ -80,15 +84,15 @@ describe('Convert Utility Tests', () => {
     });
   });
 
-  describe('toNumber method', () => {
-    it('should return 123 when passed a string', () => {
-      const testData = '123';
+  describe("toNumber method", () => {
+    it("should return 123 when passed a string", () => {
+      const testData = "123";
       const expected = 123;
       const resp = toNumber(testData);
       expect(resp).to.equal(expected);
     });
 
-    it('should return 0 when passed a null', () => {
+    it("should return 0 when passed a null", () => {
       const testData = null;
       const expected = 0;
       const resp = toNumber(testData);

@@ -1,8 +1,10 @@
-name: Node Integration Process
+name: Default Node CI
 
 on:
-  push: {branches: main}
-  pull_request: {branches: main}
+  push:
+    branches: main
+  pull_request:
+    types: [opened, synchronize, reopened]
 
 jobs:
   ci:
@@ -10,15 +12,15 @@ jobs:
     steps:
       - name: Checking Out Commits Securely..
         uses: actions/checkout@v2
-      - name: Setup Node 12.x Environment...
+      - name: Setup Node 14.x Environment...
         uses: actions/setup-node@v1
-        with: 
-          node-version: 12.x
+        with:
+          node-version: 14.x
           registry-url: https://npm.pkg.github.com/
           scope: "@wh-iterabb-it"
       - name: Installing Dependencies...
         working-directory: .
-        run: npm install
+        run: npm ci
         env:
           GITHUB_TOKEN: ${{secrets.NODE_AUTH_TOKEN}}
       - name: Running npm run test...
