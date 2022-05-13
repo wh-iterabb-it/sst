@@ -4,8 +4,6 @@ a set of common tools for node, which are pretty trivial to bring into a new rep
 
 ---
 
-[![Dependency Status](https://img.shields.io/david/wh-iterabb-it/server-side-tools.svg?style=flat)](https://david-dm.org/wh-iterabb-it/server-side-tools#info=Dependencies)
-[![devDependency Status](https://img.shields.io/david/dev/wh-iterabb-it/server-side-tools.svg?style=flat)](https://david-dm.org/BeauBouchard/server-side-tools#info=devDependencies)
 [![codecov](https://codecov.io/gh/wh-iterabb-it/server-side-tools/branch/main/graph/badge.svg)](https://codecov.io/gh/wh-iterabb-it/server-side-tools)
 
 
