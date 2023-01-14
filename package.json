@@ -24,7 +24,7 @@
     "test:lint:fix": "eslint . --fix --ignore-pattern polyfills"
   },
   "dependencies": {
-    "winston": "3.7.2"
+    "winston": "3.8.2"
   },
   "devDependencies": {
     "chai": "4.3.7",
