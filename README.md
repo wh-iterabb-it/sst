@@ -4,9 +4,6 @@ a set of common tools for node, which are pretty trivial to bring into a new rep
 
 ---
 ![Known Vulnerabilities](https://snyk.io/test/github/wh-iterabb-it/sst/badge.svg) 
-[![Total alerts](https://img.shields.io/lgtm/alerts/g/wh-iterabb-it/meowfacts.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/wh-iterabb-it/sst/alerts/) 
-[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/wh-iterabb-it/sst.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/wh-iterabb-it/sst/context:javascript)
-
 [![codecov](https://codecov.io/gh/wh-iterabb-it/sst/branch/main/graph/badge.svg)](https://codecov.io/gh/wh-iterabb-it/sst)
 
 
