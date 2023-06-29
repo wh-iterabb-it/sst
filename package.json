@@ -18,7 +18,6 @@
     "Ash Kamel <https://github.com/ajkamel>"
   ],
   "scripts": {
-    "cover": "nyc npm test && nyc report --reporter=text-lcov > coverage.lcov && ./node_modules/.bin/codecov",
     "test": "node_modules/.bin/mocha tests/. --recursive",
     "test:lint": "eslint .",
     "test:lint:fix": "eslint . --fix --ignore-pattern polyfills"
@@ -30,11 +29,9 @@
     "chai": "4.3.7",
     "codecov": "3.8.3",
     "eslint": "8.43.0",
-    "eslint-config-prettier": "8.8.0",
-    "eslint-plugin-import": "2.27.5",
-    "eslint-plugin-prettier": "4.2.1",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "mocha": "10.2.0",
-    "nyc": "15.1.0",
     "prettier": "2.8.8",
     "sinon": "9.2.4",
     "sinon-chai": "3.6.0"
