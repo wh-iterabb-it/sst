@@ -26,7 +26,7 @@
     "winston": "3.11.0"
   },
   "devDependencies": {
-    "chai": "4.3.10",
+    "chai": "4.4.1",
     "codecov": "3.8.3",
     "eslint": "8.53.0",
     "eslint-config-prettier": "^9.0.0",
